@@ -1,0 +1,23 @@
+{
+  "name": "vsp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/index.js",
+  "scripts": {
+    "start": "node ./bin/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "preferGlobal": true,
+  "bin": {
+    "vspack": "./bin/index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "get-folder-size": "^4.0.0",
+    "ncp": "^2.0.0",
+    "uuid": "^9.0.1",
+    "zip-lib": "^0.7.3"
+  }
+}
