@@ -36,10 +36,11 @@ ncp(projectdir, tmpdir, {
         const time = p2 - p1;
         console.log("Archived in " + time + "ms");
 
-        var stats = fs.statSync(outputName);
-        var fileSizeInBytes = stats.size;
+        const stats = fs.statSync(outputName);
+        const fileSizeInBytes = stats.size;
         // Convert the file size to megabytes (optional)
-        var fileSizeInMegabytes = fileSizeInBytes / (1024*1024);
+        const fileSizeInMegabytes = fileSizeInBytes / (1024*1024);
+        fs.rmSync(tmpdir, { recursive: true, force: true });
         console.log(`zip size: ${fileSizeInMegabytes.toFixed(2)}MB`);
     }, function (err) {
         console.log(err);
